@@ -23,6 +23,10 @@ resource "openstack_compute_instance_v2" "app_server" {
     name = var.app_network
   }
 
+  depends_on =[
+    var.subnet_resource
+  ]
+
 }
 
 resource "openstack_compute_floatingip_v2" "public" {

@@ -32,3 +32,7 @@ variable "ext_net_name" {
 variable "app_network" {
   description = "Name of the network to deploy the application to"
 }
+
+variable "subnet_resource" {
+  description = "The subnet resource exported from the previous module"
+}
